@@ -8,7 +8,7 @@ class ScoreCardWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 24),
         height: 136,
         decoration: BoxDecoration(
           color: AppColors.white,
