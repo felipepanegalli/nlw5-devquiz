@@ -7,7 +7,7 @@ class AwnserWidget extends StatelessWidget {
   final AwnserModel awnser;
   final bool isSelected;
   final bool isDisabled;
-  final VoidCallback onTap;
+  final ValueChanged<bool> onTap;
 
   AwnserWidget({
     Key? key,
@@ -39,7 +39,9 @@ class AwnserWidget extends StatelessWidget {
     return IgnorePointer(
       ignoring: isDisabled,
       child: GestureDetector(
-        onTap: onTap,
+        onTap: () {
+          onTap(awnser.isRight);
+        },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
           child: Container(
